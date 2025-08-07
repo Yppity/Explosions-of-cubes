@@ -3,10 +3,24 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public void Explode(float explosionForce, float explosionRadius)
+    [SerializeField] private Spawner _spawner;
+    [SerializeField] private int _explosionForce = 10;
+    [SerializeField] private int _explosionRadius = 100;
+
+    private void OnEnable()
     {
-        foreach (Rigidbody explodableObject in GetExplodableObject(explosionRadius))
-            explodableObject.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+        _spawner.FragmentableObjectDestroy += Explode;
+    }
+
+    private void OnDisable()
+    {
+        _spawner.FragmentableObjectDestroy -= Explode;
+    }
+
+    public void Explode()
+    {
+        foreach (Rigidbody explodableObject in GetExplodableObject(_explosionRadius))
+            explodableObject.AddExplosionForce(_explosionForce, transform.position, _explosionRadius);
     }
 
     private List<Rigidbody> GetExplodableObject(float explosionRadius)

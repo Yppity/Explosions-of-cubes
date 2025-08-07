@@ -61,7 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Explosion.cs" />
-    <Compile Include="Assets\Scripts\FragmentationObject.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Fragmentable Object.cs" />
+    <Compile Include="Assets\Scripts\Raycaster.cs" />
+    <Compile Include="Assets\Scripts\Random Color Setter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
