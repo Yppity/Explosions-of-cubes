@@ -4,52 +4,52 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private ActionManager _actionManager;
+    [SerializeField] private EventHub _eventHub;
 
-    public event Action<List<FragmentableObject>> FragmentableObjectDestroy;
+    public event Action<List<Cube>> CubeDestroy;
 
     private void OnEnable()
     {
-        _actionManager.FragmentableObjectHit += FragmentationObject;
+        _eventHub.CubeHit += FragmentationObject;
     }
 
     private void OnDisable()
     {
-        _actionManager.FragmentableObjectHit -= FragmentationObject;
+        _eventHub.CubeHit -= FragmentationObject;
     }
 
-    private void FragmentationObject(FragmentableObject fragmentableObject)
+    private void FragmentationObject(Cube cube)
     {
         int multiplierSizeFragments = 2;
         int fragmentationChanceReductionMultiplier = 2;
         int minFragmentation = 2;
         int maxFragmentation = 7;
         int percentageMultiplier = 101;
-        List<FragmentableObject> newFragmentableObjects = new List<FragmentableObject>();
+        List<Cube> newCubes = new List<Cube>();
 
         int chanceSuccessfulFragmentation = UnityEngine.Random.Range(0, percentageMultiplier);
 
-        if (chanceSuccessfulFragmentation <= fragmentableObject.GetChanceFragmentation())
+        if (chanceSuccessfulFragmentation <= cube.GetChanceFragmentation())
         {
-            Vector3 scale = fragmentableObject.transform.localScale / multiplierSizeFragments;
-            int chanceFragmentation = fragmentableObject.GetChanceFragmentation() / fragmentationChanceReductionMultiplier;
+            Vector3 scale = cube.transform.localScale / multiplierSizeFragments;
+            int chanceFragmentation = cube.GetChanceFragmentation() / fragmentationChanceReductionMultiplier;
 
             int numberFragmentations = UnityEngine.Random.Range(minFragmentation, maxFragmentation);
 
             for (int i = 0; i < numberFragmentations; i++)
             {
-                fragmentableObject.Initialized(chanceFragmentation, scale);
-                FragmentableObject newFragmentableObject = Instantiate(fragmentableObject);
-                newFragmentableObjects.Add(newFragmentableObject);
+                cube.Initialized(chanceFragmentation, scale);
+                Cube newCube = Instantiate(cube);
+                newCubes.Add(newCube);
             }
         }
 
-        DestroyFragmentableObject(fragmentableObject, newFragmentableObjects);
+        DestroyFragmentableObject(cube, newCubes);
     }
 
-    private void DestroyFragmentableObject(FragmentableObject fragmentableObject, List<FragmentableObject> fragmentableObjects)
+    private void DestroyFragmentableObject(Cube cube, List<Cube> Cubes)
     {
-        Destroy(fragmentableObject.gameObject);
-        FragmentableObjectDestroy?.Invoke(fragmentableObjects);
+        Destroy(cube.gameObject);
+        CubeDestroy?.Invoke(Cubes);
     }
 }
