@@ -1,20 +1,21 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private Raycaster _raycaster;
+    [SerializeField] private ActionManager _actionManager;
 
-    public event Action FragmentableObjectDestroy;
+    public event Action<List<FragmentableObject>> FragmentableObjectDestroy;
 
     private void OnEnable()
     {
-        _raycaster.FragmentableObjectHit += FragmentationObject;
+        _actionManager.FragmentableObjectHit += FragmentationObject;
     }
 
     private void OnDisable()
     {
-        _raycaster.FragmentableObjectHit -= FragmentationObject;
+        _actionManager.FragmentableObjectHit -= FragmentationObject;
     }
 
     private void FragmentationObject(FragmentableObject fragmentableObject)
@@ -24,6 +25,7 @@ public class Spawner : MonoBehaviour
         int minFragmentation = 2;
         int maxFragmentation = 7;
         int percentageMultiplier = 101;
+        List<FragmentableObject> newFragmentableObjects = new List<FragmentableObject>();
 
         int chanceSuccessfulFragmentation = UnityEngine.Random.Range(0, percentageMultiplier);
 
@@ -37,16 +39,17 @@ public class Spawner : MonoBehaviour
             for (int i = 0; i < numberFragmentations; i++)
             {
                 fragmentableObject.Initialized(chanceFragmentation, scale);
-                Instantiate(fragmentableObject);
+                FragmentableObject newFragmentableObject = Instantiate(fragmentableObject);
+                newFragmentableObjects.Add(newFragmentableObject);
             }
         }
 
-        DestroyFragmentableObject(fragmentableObject);
+        DestroyFragmentableObject(fragmentableObject, newFragmentableObjects);
     }
 
-    private void DestroyFragmentableObject(FragmentableObject fragmentableObject)
+    private void DestroyFragmentableObject(FragmentableObject fragmentableObject, List<FragmentableObject> fragmentableObjects)
     {
         Destroy(fragmentableObject.gameObject);
-        FragmentableObjectDestroy?.Invoke();
+        FragmentableObjectDestroy?.Invoke(fragmentableObjects);
     }
 }
