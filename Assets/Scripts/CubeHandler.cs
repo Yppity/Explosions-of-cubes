@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,7 +37,11 @@ public class CubeHandler : MonoBehaviour
 
             cube.Initialize(chanceFragmentation, scale);
             newCubes = _spawner.SpawnFragments(cube, numberFragmentations);
-            _explosion.Explode(newCubes);
+            _explosion.ExplodeFragments(cube, newCubes);
+        }
+        else
+        {
+            _explosion.ExplodeCube(cube);
         }
 
         _spawner.DestroyCube(cube);

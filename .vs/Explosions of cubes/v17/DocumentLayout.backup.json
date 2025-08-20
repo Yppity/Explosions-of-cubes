@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cubehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|E:\\Unity\\Project\\Explosions of cubes\\assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|E:\\Unity\\Project\\Explosions of cubes\\assets\\scripts\\raycaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\raycaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|e:\\unity\\project\\explosions of cubes\\assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|e:\\unity\\project\\explosions of cubes\\assets\\scripts\\raycaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\raycaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|E:\\Unity\\Project\\Explosions of cubes\\assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|E:\\Unity\\Project\\Explosions of cubes\\assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2A4C8F79-353D-76EF-431D-44AA34917839}|Assembly-CSharp.csproj|E:\\Unity\\Project\\Explosions of cubes\\assets\\scripts\\randomcolorsetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CubeHandler.cs",
               "ToolTip": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\CubeHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\CubeHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T16:54:57.868Z",
               "EditorCaption": ""
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Cube.cs",
               "DocumentMoniker": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Cube.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cube.cs",
@@ -73,35 +73,22 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T16:52:08.397Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Explosion.cs",
-              "DocumentMoniker": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Explosion.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Explosion.cs",
-              "ToolTip": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Explosion.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Explosion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T16:51:34.66Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 207,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Spawner.cs",
               "DocumentMoniker": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Spawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
               "ToolTip": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Spawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\Spawner.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-07T02:51:45.494Z",
               "EditorCaption": ""
@@ -114,9 +101,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Raycaster.cs",
               "ToolTip": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Raycaster.cs",
               "RelativeToolTip": "Assets\\Scripts\\Raycaster.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T04:51:53.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Explosion.cs",
+              "DocumentMoniker": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Explosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Explosion.cs",
+              "ToolTip": "E:\\Unity\\Project\\Explosions of cubes\\Assets\\Scripts\\Explosion.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Explosion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T16:51:34.66Z",
               "EditorCaption": ""
             }
           ]
