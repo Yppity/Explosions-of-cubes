@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 61616146}
   - component: {fileID: 61616147}
   m_Layer: 0
-  m_Name: Explosion Manager
+  m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d75f81fb054aa9499399a8acfa7fa3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionManager: {fileID: 698553238}
   _explosionForce: 10
   _explosionRadius: 100
 --- !u!1 &96329929
@@ -287,7 +286,7 @@ GameObject:
   - component: {fileID: 698553239}
   - component: {fileID: 698553238}
   m_Layer: 0
-  m_Name: Action Manager
+  m_Name: CubeHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,6 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _raycaster: {fileID: 1141281437}
   _spawner: {fileID: 1750046678}
+  _explosion: {fileID: 61616147}
 --- !u!4 &698553239
 Transform:
   m_ObjectHideFlags: 0
@@ -1120,7 +1120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57deade2c44b6b49a216f7a489c1fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionManager: {fileID: 698553238}
 --- !u!4 &1750046679
 Transform:
   m_ObjectHideFlags: 0

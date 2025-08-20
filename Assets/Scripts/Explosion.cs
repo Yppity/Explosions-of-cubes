@@ -3,19 +3,8 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    [SerializeField] private EventHub _eventHub;
     [SerializeField] private int _explosionForce = 10;
     [SerializeField] private int _explosionRadius = 100;
-
-    private void OnEnable()
-    {
-        _eventHub.CubeDestroy += Explode;
-    }
-
-    private void OnDisable()
-    {
-        _eventHub.CubeDestroy -= Explode;
-    }
 
     public void Explode(List<Cube> cubes)
     {

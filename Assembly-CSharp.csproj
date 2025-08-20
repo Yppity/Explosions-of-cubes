@@ -62,8 +62,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\RandomColorSetter.cs" />
+    <Compile Include="Assets\Scripts\CubeHandler.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scripts\EventHub.cs" />
     <Compile Include="Assets\Scripts\Raycaster.cs" />
     <Compile Include="Assets\Scripts\Cube.cs" />
   </ItemGroup>

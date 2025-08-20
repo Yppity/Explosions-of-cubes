@@ -353,7 +353,7 @@
 -analyzer:"E:/Unity/2022.3.17f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"E:/Unity/2022.3.17f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Cube.cs"
-"Assets/Scripts/EventHub.cs"
+"Assets/Scripts/CubeHandler.cs"
 "Assets/Scripts/Explosion.cs"
 "Assets/Scripts/RandomColorSetter.cs"
 "Assets/Scripts/Raycaster.cs"

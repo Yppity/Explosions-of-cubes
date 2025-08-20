@@ -5,7 +5,7 @@ public class Raycaster : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
 
-    public event Action<Cube> Cube;
+    public event Action<Cube> CubeHit;
 
     private void Update()
     {
@@ -15,7 +15,7 @@ public class Raycaster : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit))
                 if (hit.collider.TryGetComponent(out Cube fragmentable))
-                    Cube?.Invoke(fragmentable);
+                    CubeHit?.Invoke(fragmentable);
         }
     }
 }
