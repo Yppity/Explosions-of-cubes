@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeHandler : MonoBehaviour
+public class CubeInteraction : MonoBehaviour
 {
     [SerializeField] private Raycaster _raycaster;
     [SerializeField] private Spawner _spawner;
@@ -9,15 +9,15 @@ public class CubeHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        _raycaster.CubeHit += FragmentationCube;
+        _raycaster.CubeHit += ProcessCubeClick;
     }
 
     private void OnDisable()
     {
-        _raycaster.CubeHit -= FragmentationCube;
+        _raycaster.CubeHit -= ProcessCubeClick;
     }
 
-    private void FragmentationCube(Cube cube)
+    private void ProcessCubeClick(Cube cube)
     {
         int multiplierSizeFragments = 2;
         int fragmentationChanceReductionMultiplier = 2;
@@ -31,12 +31,11 @@ public class CubeHandler : MonoBehaviour
         {
             List<Cube> newCubes = new List<Cube>();
 
-            Vector3 scale = cube.transform.localScale / multiplierSizeFragments;
-            int chanceFragmentation = cube.ChanceFragmentation / fragmentationChanceReductionMultiplier;
+            Vector3 newScale = cube.transform.localScale / multiplierSizeFragments;
+            int newChanceFragmentation = cube.ChanceFragmentation / fragmentationChanceReductionMultiplier;
             int numberFragmentations = UnityEngine.Random.Range(minFragmentation, maxFragmentation);
 
-            cube.Initialize(chanceFragmentation, scale);
-            newCubes = _spawner.SpawnFragments(cube, numberFragmentations);
+            newCubes = _spawner.SpawnFragments(cube, numberFragmentations, newChanceFragmentation, newScale);
             _explosion.ExplodeFragments(cube, newCubes);
         }
         else
